@@ -32,43 +32,43 @@
         <p class="order__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="order-form__basic">
-            <label for="name">Имя:*</label>
+            <label class="order-form__label" for="name">Имя:*</label>
             <input class="order-form__input" type="text" name="name" id="name" required>
-            <label for="weight">Вес (кг):*</label>
+            <label class="order-form__label" for="weight">Вес (кг):*</label>
             <input class="order-form__input" type="text" name="weight" id="weight" required>
-            <label for="age">Возраст (лет):</label>
+            <label class="order-form__label" for="age">Возраст (лет):</label>
             <input class="order-form__input" type="text" name="age" id="age">
           </fieldset>
           <fieldset class="order-form__kind">
-            <label for="weightloss">Похудение</label>
+            <label class="order-form__label" for="weightloss">Похудение</label>
             <input class="order-form__radio" type="radio" name="weightloss" id="weightloss" value="weightloss">
-            <label for="gain">Набор массы</label>
+            <label class="order-form__label" for="gain">Набор массы</label>
             <input class="order-form__radio" type="radio" name="gain" id="gain" value="gain">
-            <label for="please-advise">Не знаю (Нужен ваш совет)</label>
+            <label class="order-form__label" for="please-advise">Не знаю (Нужен ваш совет)</label>
             <input class="order-form__radio" type="radio" name="please-advise" id="please-advise" value="please-advise">
           </fieldset>
           <fieldset class="order-form__owner">
-            <legend>Контактные данные (владельца кота)</legend>
-            <label for="email">E-mail:*</label>
+            <legend class="order-form__header">Контактные данные (владельца кота)</legend>
+            <label class="order-form__label" for="email">E-mail:*</label>
             <input class="order-form__input" type="text" name="email" id="email" required>
-            <label for="phone">Телефон:*</label>
+            <label class="order-form__label" for="phone">Телефон:*</label>
             <input class="order-form__input" type="text" name="phone" id="phone" required>
           </fieldset>
           <fieldset class="order-form__comment">
-            <legend>Комментарий</legend>
-            <textarea rows="4" cols="50">Расскажите обо всех повадках кота
+            <legend class="order-form__header">Комментарий</legend>
+            <textarea class="order-form__comment-field" rows="4" cols="50">Расскажите обо всех повадках кота
             </textarea>
           </fieldset>
           <fieldset class="order-form__other">
-            <legend>Дополнительно</legend>
+            <legend class="order-form__header">Дополнительно</legend>
             <input class="order-form__checkbox" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked>
-            <label for="sweetener">Сахарозаменитель</label>
+            <label class="order-form__label" for="sweetener">Сахарозаменитель</label>
             <input class="order-form__checkbox" type="checkbox" name="water" id="water" value="water">
-            <label for="water">Питьевая вода</label>
+            <label class="order-form__label" for="water">Питьевая вода</label>
             <input class="order-form__checkbox" type="checkbox" name="milk" id="milk" value="milk">
-            <label for="milk">Молоко</label>
+            <label class="order-form__label" for="milk">Молоко</label>
             <input class="order-form__checkbox" type="checkbox" name="vitamins" id="vitamins" value="vitamins">
-            <label for="vitamins">Витамины</label>
+            <label class="order-form__label" for="vitamins">Витамины</label>
           </fieldset>
           <button class="order-form__button button" type="submit">Отправить заявку
           </button>
