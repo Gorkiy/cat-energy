@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-mobile-header.svg" width="191" height="39" alt="Кэт энерджи">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-order">
+      <section class="order">
+        <h1 class="order__header">Подбор программы</h1>
+        <p class="order__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="order-form__basic">
+            <label class="order-form__label" for="name">Имя:*</label>
+            <input class="order-form__input" type="text" name="name" id="name" required>
+            <label class="order-form__label" for="weight">Вес (кг):*</label>
+            <input class="order-form__input" type="text" name="weight" id="weight" required>
+            <label class="order-form__label" for="age">Возраст (лет):</label>
+            <input class="order-form__input" type="text" name="age" id="age">
+          </fieldset>
+          <fieldset class="order-form__kind">
+            <label class="order-form__label" for="weightloss">Похудение</label>
+            <input class="order-form__radio" type="radio" name="weightloss" id="weightloss" value="weightloss">
+            <label class="order-form__label" for="gain">Набор массы</label>
+            <input class="order-form__radio" type="radio" name="gain" id="gain" value="gain">
+            <label class="order-form__label" for="please-advise">Не знаю (Нужен ваш совет)</label>
+            <input class="order-form__radio" type="radio" name="please-advise" id="please-advise" value="please-advise">
+          </fieldset>
+          <fieldset class="order-form__owner">
+            <legend class="order-form__header">Контактные данные (владельца кота)</legend>
+            <label class="order-form__label" for="email">E-mail:*</label>
+            <input class="order-form__input" type="text" name="email" id="email" required>
+            <label class="order-form__label" for="phone">Телефон:*</label>
+            <input class="order-form__input" type="text" name="phone" id="phone" required>
+          </fieldset>
+          <fieldset class="order-form__comment">
+            <legend class="order-form__header">Комментарий</legend>
+            <textarea class="order-form__comment-field" rows="4" cols="50">Расскажите обо всех повадках кота
+            </textarea>
+          </fieldset>
+          <fieldset class="order-form__other">
+            <legend class="order-form__header">Дополнительно</legend>
+            <input class="order-form__checkbox" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked>
+            <label class="order-form__label" for="sweetener">Сахарозаменитель</label>
+            <input class="order-form__checkbox" type="checkbox" name="water" id="water" value="water">
+            <label class="order-form__label" for="water">Питьевая вода</label>
+            <input class="order-form__checkbox" type="checkbox" name="milk" id="milk" value="milk">
+            <label class="order-form__label" for="milk">Молоко</label>
+            <input class="order-form__checkbox" type="checkbox" name="vitamins" id="vitamins" value="vitamins">
+            <label class="order-form__label" for="vitamins">Витамины</label>
+          </fieldset>
+          <button class="order-form__button button" type="submit">Отправить заявку
+          </button>
+          <span class="order-form__note">* — Обязательные поля</span>
+        </form>
+      </section>
+    </main>
+    <section class="contacts">
+      <p class="contacts__callout">Приглашаем к сотрудничеству дилеров!</p>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+      <div class="contacts__map"></div>
+    </section>
+    <footer class="page-footer">
+      <img class="contacts__logo" src="img/footer-logo.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__name">HTML Academy</b>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
