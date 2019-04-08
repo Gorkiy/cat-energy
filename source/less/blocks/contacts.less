@@ -1,0 +1,43 @@
+.contacts__container {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__callout {
+  font-family: @font;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.25;
+  color: @main-color;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  font: inherit;
+  line-height: 1.43;
+}
+
+.contacts__map {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center/cover;
+}
+
+.contacts__map::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 124px;
+  height: 106px;
+  background: url("../img/map-pin.png") no-repeat center/contain;
+}
+
+.contacts__logo {
+  display: block;
+  margin: 40px auto 30px auto;
+}
