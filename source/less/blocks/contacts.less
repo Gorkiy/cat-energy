@@ -2,16 +2,18 @@
   padding: 30px 20px;
   display: flex;
   justify-content: space-between;
+
+  &--grey {
+    background-color: @grey-bg;
+  }
 }
 
 .contacts__callout {
-  font-family: @font;
-  font-size: 16px;
+  .header--upper(16px);
   font-weight: normal;
   line-height: 1.25;
   color: @main-color;
   text-align: left;
-  text-transform: uppercase;
 }
 
 .contacts__address {

@@ -1,0 +1,71 @@
+.addons {
+  padding: 20px;
+}
+
+.addons__header {
+  position: relative;
+  .header(24px);
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 53px;
+    height: 3px;
+    background-color: @green-bg;
+  }
+}
+
+.addons__list {
+  .list-reset();
+  border-bottom: 1px solid #eaeaea;
+}
+
+.addons__item {
+  position: relative;
+  padding-bottom: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.addons__name {
+  margin-bottom: 12px;
+  .header--upper(16px);
+  font-weight: normal;
+  line-height: 1;
+}
+
+.addons__package,
+.addons__price {
+  color: @paragraph-color;
+}
+
+.addons__price {
+  position: absolute;
+  right: 20px;
+}
+
+.addons__button {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.addons__goodies {
+  margin-top: 40px;
+  padding: 180px 60px 0;
+  width: 280px;
+  height: 289px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.25;
+  color: white;
+  background: url("../img/icon-gift.svg") no-repeat center / 56px 61px,
+    url("../img/gift-photo-mobile@1x.jpg") no-repeat center,
+    @green-bg;
+  background-position: center 20%;
+}
