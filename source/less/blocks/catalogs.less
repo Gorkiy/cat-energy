@@ -1,9 +1,7 @@
-@import "../variables.less";
-
 .catalogs__item {
-  margin-top: 20px;
+  margin: 20px;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: @grey-bg;
 }
 
 .catalogs__header {
@@ -15,45 +13,46 @@
   line-height: 1.54;
   color: @main-color;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @green-bg;
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+  }
+
+  &--pro::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -80px;
+    width: 67px;
+    height: 50px;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
+  }
 }
 
-.catalogs__header::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -70px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: @green-bg;
-}
-
-.catalogs__header--slim::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -70px;
-  width: 50px;
-  height: 50px;
-  background: url("../img/icon-cat-slim.svg") no-repeat center;
-}
-
-.catalogs__header--pro::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -80px;
-  width: 67px;
-  height: 50px;
-  background: url("../img/icon-cat-pro.svg") no-repeat center;
-}
-
-.catalogs__separator {
-  margin-top: 15px;
+.catalogs__description {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dedede;
 }
 
 .catalogs__button {
-  margin-top: 10px;
+  margin-top: 5px;
   position: relative;
   display: inline-block;
   font-family: @font;
@@ -61,26 +60,26 @@
   font-weight: normal;
   color: @main-color;
   text-transform: uppercase;
-}
 
-.catalogs__button::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  right: -26px;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid @main-color;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -26px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid @main-color;
+  }
 
-.catalogs__button::after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  right: -22px;
-  width: 15px;
-  height: 2px;
-  background-color: black;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -22px;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+  }
 }

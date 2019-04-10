@@ -7,27 +7,27 @@
 .progress__bar {
   margin: 0 20px;
   position: relative;
-}
 
-.progress__bar::before {
-  content: "";
-  display: inline-block;
-  width: 84px;
-  height: 14px;
-  background-color: white;
-  border-radius: 6px;
-  border: solid 1px #cdcdcd;
-}
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 84px;
+    height: 14px;
+    background-color: white;
+    border-radius: 6px;
+    border: solid 1px #cdcdcd;
+  }
 
-.progress__bar::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 35px;
-  height: 6px;
-  background-color: @green-bg;
-  border-radius: 3px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 35px;
+    height: 6px;
+    background-color: @green-bg;
+    border-radius: 3px;
+  }
 }
 
 .progress__title {
