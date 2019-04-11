@@ -137,3 +137,49 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .catalogs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalogs__item {
+    flex-basis: 570px;
+  }
+
+  .catalogs__header {
+    margin-left: 150px;
+    font-size: 36px;
+
+    &::before {
+      top: -35px;
+      left: -150px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: -35px;
+      left: -130px;
+      width: 71px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: -10px;
+      left: -165px;
+      width: 134px;
+      height: 57px;
+    }
+  }
+
+  .catalogs__description {
+    max-width: none;
+    margin-top: 70px;
+  }
+
+  .catalogs__button {
+    margin-top: 0;
+  }
+}

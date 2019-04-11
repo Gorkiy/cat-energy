@@ -68,8 +68,6 @@
     padding-top: 100px;
     margin-left: 0;
     margin-bottom: 50px;
-    display: flex;
-    align-items: flex-end;
     flex-basis: 350px;
 
     &::before {
@@ -109,5 +107,20 @@
   .features__description {
     width: 220px;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__list {
+    margin: 50px 0 120px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    margin-bottom: 0;
+    display: block;
+    align-items: flex-end;
+    flex-basis: 240px;
   }
 }
