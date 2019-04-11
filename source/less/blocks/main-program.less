@@ -19,10 +19,40 @@
 }
 
 .main-program__slogan {
-  display: block;
   margin: 19px auto 30px;
+  display: block;
   .header--upper(14px);
+  font-weight: normal;
   line-height: 1;
   color: white;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .main-program {
+    padding-left: 90px;
+    padding-right: 90px;
+    min-height: 740px;
+    text-align: left;
+    background: none,
+      white;
+  }
+
+  .main-program__header {
+    color: @main-color;
+    text-align: left;
+    width: 500px;
+  }
+
+  .main-program__slogan {
+    margin-top: 30px;
+    color: @main-color;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .main-program__button {
+    position: absolute;
+    top: 300px; /* Временно. ps. И posiiton нет у нужного родителя. */
+  }
 }
