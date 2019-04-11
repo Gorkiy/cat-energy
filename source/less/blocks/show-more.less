@@ -1,0 +1,32 @@
+.show-more {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.show-more__button {
+  width: 100%;
+  background-color: @grey-bg;
+  color: @paragraph-color;
+}
+
+.show-more__callout {
+  position: relative;
+  .header--upper(16px);
+  line-height: 1.25;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 31px;
+    height: 31px;
+    opacity: 0.2;
+    background: url("../img/icon-plus-mobile.svg") no-repeat center;
+  }
+}
+
+.show-more__text {
+  color: @paragraph-color;
+}
