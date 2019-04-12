@@ -32,7 +32,7 @@
     </header>
     <main class="page-catalog">
       <h1 class="page-catalog__header title">Каталог продукции</h1>
-      <section class="catalog">
+      <section class="catalog container">
         <ul class="catalog__list">
           <li class="catalog__item">
             <img class="catalog__image" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy PRO, Курица, 500 грамм">
@@ -181,69 +181,76 @@
             </div>
             <a class="catalog__button button" href="#">Заказать</a>
           </li>
+          <li class="catalog__item catalog__item--show-more show-more">
+            <p class="show-more__callout">Показать еще 100500 товаров</p>
+            <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
+            <a class="show-more__button button" href="#">Показать все</a>
+          </li>
         </ul>
-        <div class="catalog__show-more show-more">
-          <p class="show-more__callout">Показать еще 100500 товаров</p>
-          <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-          <a class="show-more__button button" href="#">Показать все</a>
-        </div>
       </section>
       <section class="addons">
         <h2 class="addons__header">Дополнительные товары</h2>
-        <ul class="addons__list">
-          <li class="addons__item">
-            <h3 class="addons__name">Сахарозаменитель</h3>
-            <span class="addons__package">1 упаковка (100 г)</span>
-            <span class="addons__price">200 Р</span>
-            <a class="addons__button button" href="#">Заказать</a>
-          </li>
-          <li class="addons__item">
-            <h3 class="addons__name">Питьевая вода</h3>
-            <span class="addons__package">5 литров</span>
-            <span class="addons__price">500 Р</span>
-            <a class="addons__button button" href="#">Заказать</a>
-          </li>
-          <li class="addons__item">
-            <h3 class="addons__name">Молоко</h3>
-            <span class="addons__package">1 литр</span>
-            <span class="addons__price">100 Р</span>
-            <a class="addons__button button" href="#">Заказать</a>
-          </li>
-          <li class="addons__item">
-            <h3 class="addons__name">Витамины</h3>
-            <span class="addons__package">1 упаковка (30 г)</span>
-            <span class="addons__price">300 Р</span>
-            <a class="addons__button button" href="#">Заказать</a>
-          </li>
-        </ul>
-        <p class="addons__goodies">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="addons_wrapper container">
+          <ul class="addons__list">
+            <li class="addons__item">
+              <h3 class="addons__name">Сахарозаменитель</h3>
+              <span class="addons__package">1 упаковка (100 г)</span>
+              <span class="addons__price">200 Р</span>
+              <a class="addons__button button" href="#">Заказать</a>
+            </li>
+            <li class="addons__item">
+              <h3 class="addons__name">Питьевая вода</h3>
+              <span class="addons__package">5 литров</span>
+              <span class="addons__price">500 Р</span>
+              <a class="addons__button button" href="#">Заказать</a>
+            </li>
+            <li class="addons__item">
+              <h3 class="addons__name">Молоко</h3>
+              <span class="addons__package">1 литр</span>
+              <span class="addons__price">100 Р</span>
+              <a class="addons__button button" href="#">Заказать</a>
+            </li>
+            <li class="addons__item">
+              <h3 class="addons__name">Витамины</h3>
+              <span class="addons__package">1 упаковка (30 г)</span>
+              <span class="addons__price">300 Р</span>
+              <a class="addons__button button" href="#">Заказать</a>
+            </li>
+          </ul>
+          <div class="addons__goodies-wrapper container">
+            <p class="addons__goodies">Закажите все и получите чехол для кота в подарок!</p>
+          </div>
+        </div>
       </section>
     </main>
     <section class="contacts">
-      <div class="contacts__container contacts__container--grey">
+      <div class="contacts__container container">
         <p class="contacts__callout">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
       </div>
       <div class="contacts__map"></div>
     </section>
     <footer class="page-footer">
-      <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__name">HTML Academy</b>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="54" height="68" alt="HTML Academy"></a>
+      <div class="page-footer__wrapper container">
+        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__name">HTML Academy</b>
+          <!-- <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a> -->
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
+        </div>
       </div>
     </footer>
   </body>
