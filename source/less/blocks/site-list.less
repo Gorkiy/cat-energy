@@ -1,16 +1,28 @@
+.site-list {
+  color: @main-color;
+}
+
 .site-list__item {
   padding: 24px;
-  .header--upper(20px);
+  .header--upper(18px);
   line-height: 1;
-  color: @main-color;
   text-align: center;
   border-bottom: 1px solid #eaeaea;
+}
+
+.site-list__link {
+  color: inherit;
 }
 
 @media (min-width: @tablet-width) {
   .site-list__item {
     padding: 0;
-    margin-left: 36px;
-    border: 0;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list--home {
+    color: white;
   }
 }

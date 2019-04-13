@@ -10,3 +10,23 @@
   display: block;
   margin: 20px auto 30px;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding: 30px;
+    background-color: @grey-bg;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
+  }
+}

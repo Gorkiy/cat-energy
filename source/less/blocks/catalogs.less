@@ -1,5 +1,5 @@
 .catalogs__item {
-  margin: 20px;
+  margin-top: 20px;
   padding: 20px;
   background-color: @grey-bg;
 }
@@ -8,7 +8,6 @@
   position: relative;
   margin-left: 70px;
   .header--upper(24px);
-  font-weight: normal;
   line-height: 1.54;
   color: @main-color;
 
@@ -54,7 +53,6 @@
   position: relative;
   display: inline-block;
   .header--upper(16px);
-  font-weight: normal;
   color: @main-color;
 
   &::before {
@@ -77,5 +75,109 @@
     width: 15px;
     height: 2px;
     background-color: black;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalogs__item {
+    margin-top: 30px;
+    padding: 50px;
+    background-color: @grey-bg;
+  }
+
+  .catalogs__header {
+    margin-left: auto;
+    font-size: 36px;
+    line-height: 1;
+
+    &::before {
+      top: -20px;
+      left: auto;
+      right: 10px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      left: auto;
+      top: -30px;
+      right: 10px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--pro::after {
+      left: auto;
+      top: 25px;
+      right: -20px;
+      width: 268px;
+      height: 113px;
+    }
+  }
+
+  .catalogs__description {
+    max-width: 55%;
+    border-bottom: none;
+  }
+
+  .catalogs__button {
+    margin-top: 5px;
+    font-size: 20px;
+
+    &::before {
+      top: 7px;
+      right: -34px;
+    }
+
+    &::after {
+      top: 11px;
+      right: -30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalogs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalogs__item {
+    flex-basis: 570px;
+  }
+
+  .catalogs__header {
+    margin-left: 150px;
+    font-size: 36px;
+
+    &::before {
+      top: -35px;
+      left: -150px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: -35px;
+      left: -130px;
+      width: 71px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: -10px;
+      left: -165px;
+      width: 134px;
+      height: 57px;
+    }
+  }
+
+  .catalogs__description {
+    max-width: none;
+    margin-top: 70px;
+  }
+
+  .catalogs__button {
+    margin-top: 0;
   }
 }
