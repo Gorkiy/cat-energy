@@ -18,13 +18,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a>Каталог продукции</a>
+              <a class="site-list__link" >Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="site-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -39,15 +39,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy PRO 500 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">500 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Курица</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">700 р</td>
                 </tr>
@@ -60,15 +60,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy PRO 1000 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">1000 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Курица</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">1000 р</td>
                 </tr>
@@ -81,15 +81,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy PRO 500 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">500 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Рыба</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">700 р</td>
                 </tr>
@@ -102,15 +102,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy PRO 1000 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">1000 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Рыба</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">1000 р</td>
                 </tr>
@@ -123,15 +123,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy Slim 500 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">500 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Гречка</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">400 р</td>
                 </tr>
@@ -144,15 +144,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy Slim 1000 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">1000 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Гречка</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">700 р</td>
                 </tr>
@@ -165,15 +165,15 @@
             <div class="catalog__info">
               <b class="catalog__name">Cat Energy Slim 500 г</b>
               <table class="catalog__spec spec">
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Объем</td>
                   <td class="spec__value">500 г</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Вкус</td>
                   <td class="spec__value">Рис</td>
                 </tr>
-                <tr>
+                <tr class="spec__single">
                   <td class="spec__title">Цена</td>
                   <td class="spec__value">500 р</td>
                 </tr>
@@ -182,9 +182,11 @@
             <a class="catalog__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__item catalog__item--show-more show-more">
-            <p class="show-more__callout">Показать еще 100500 товаров</p>
-            <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-            <a class="show-more__button button" href="#">Показать все</a>
+            <div class="show-more__wrapper">
+              <p class="show-more__callout">Показать еще 100500 товаров</p>
+              <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
+              <a class="show-more__button button" href="#">Показать все</a>
+            </div>
           </li>
         </ul>
       </section>

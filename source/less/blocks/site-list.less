@@ -1,10 +1,17 @@
+.site-list {
+  color: @main-color;
+}
+
 .site-list__item {
   padding: 24px;
   .header--upper(18px);
   line-height: 1;
-  color: @main-color;
   text-align: center;
   border-bottom: 1px solid #eaeaea;
+}
+
+.site-list__link {
+  color: inherit;
 }
 
 @media (min-width: @tablet-width) {
@@ -15,7 +22,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-list__item--white a { /* Временно костыль - плохой селектор */
+  .site-list--home {
     color: white;
   }
 }
