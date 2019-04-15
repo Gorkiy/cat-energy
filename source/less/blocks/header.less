@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  .header(24px);
+  line-height: 1;
+  color: @main-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    width: 53px;
+    height: 3px;
+    background-color: @green-bg;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    font-size: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: 3%;
+      height: 3px;
+      background-color: @green-bg;
+    }
+
+    &::after {
+      right: 0;
+      top: 20px;
+      width: 45%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    width: 1220px;
+  }
+}

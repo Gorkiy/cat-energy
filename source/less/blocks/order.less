@@ -1,0 +1,115 @@
+.order__description {
+  .header--upper(14px);
+  line-height: 1.29;
+}
+
+.order-form__header {
+  // ...
+}
+
+.order-form fieldset {
+  position: relative;
+  margin: 0;
+  padding: 30px 0 20px;
+  border: none;
+  color: #ffffff;
+}
+
+.order-form fieldset::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+  display: block;
+  border-bottom: 1px solid @grey-bg;
+}
+
+.order-form__label,
+.order-form__input,
+.order-form__comment-field {
+  .header--upper(16px);
+  line-height: 1.13;
+}
+
+.order-form__label {
+  margin-right: 15px;
+  color: #222222;
+}
+
+.order-form__radio-row {
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}
+
+.order-form__radio-row .order-form__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid @grey-bg;
+}
+
+.order-form__radio:checked ~ .order-form__label::after {
+  content: "";
+  position: absolute;
+  left: -39px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: @green-bg;
+}
+
+.order-form__check-row {
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}
+
+.order-form__check-row .order-form__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid @grey-bg;
+}
+
+.order-form__checkbox:checked ~ .order-form__label::after {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 3px;
+  width: 21px;
+  height: 16px;
+  background: url("../img/icon-tick.svg") no-repeat center;
+}
+
+.order-form__text-row {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.order-form__input {
+  padding: 15px;
+  flex-grow: 1;
+  color: @paragraph-color;
+}
+
+.order-form__comment-field {
+  padding: 15px;
+  width: 100%;
+  color: @paragraph-color;
+  border: 1px solid @grey-bg;
+}
+
+.order-form__button {
+  border: none;
+  width: 100%;
+}

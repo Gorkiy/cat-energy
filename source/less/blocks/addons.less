@@ -2,21 +2,8 @@
   position: relative;
 }
 
-.addons__header {
+.addons .addons__header {
   padding-left: 20px;
-  .header(24px);
-  line-height: 1;
-  margin-bottom: 30px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: -20px;
-    top: 10px;
-    width: 53px;
-    height: 3px;
-    background-color: @green-bg;
-  }
 }
 
 .addons__list {
@@ -69,29 +56,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .addons__header {
-    padding-left: 30px;
-    padding-right: 30px;
+  .addons .addons__header {
+    padding-left: 0;
+    width: 708px;
     margin-left: auto;
     margin-right: auto;
-    width: @tablet-width;
-    font-size: 36px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 20px;
-      width: 53px;
-      height: 3px;
-      background-color: @green-bg;
-    }
-
-    &::after {
-      right: 0;
-      top: 20px;
-      width: 45%;
-    }
   }
 
   .addons__list {
@@ -140,6 +109,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .addons .addons__header {
+    width: 1220px;
+  }
+
   .addons_wrapper {
     display: flex;
     justify-content: space-between;
@@ -151,13 +124,6 @@
 
   .addons__item {
     width: 895px;
-  }
-
-  .addons__header {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    width: @desktop-width - 220px;
   }
 
   .addons__button {
