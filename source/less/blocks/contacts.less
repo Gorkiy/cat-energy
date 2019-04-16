@@ -1,11 +1,15 @@
+.contacts {
+  background-color: @grey-bg;
+}
+
+.contacts--home.contacts {
+  background: white;
+}
+
 .contacts__container {
   padding: 30px 20px;
   display: flex;
   justify-content: space-between;
-
-  &--grey {
-    background-color: @grey-bg;
-  }
 }
 
 .contacts__callout {
@@ -35,5 +39,11 @@
     width: 124px;
     height: 106px;
     background: url("../img/map-pin.png") no-repeat center/contain;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    background-color: white;
   }
 }
