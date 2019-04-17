@@ -1,5 +1,7 @@
 .order-form__header {
-  width: 100%;
+  // display: table;
+  margin-left: -30px;
+  padding: 0 30px;
 }
 
 .order-form__group {
@@ -119,6 +121,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .order-form__header {
+    margin-left: -30px;
+    padding: 0 30px;
+  }
+
   .order-form__group::after {
     border: none;
   }
