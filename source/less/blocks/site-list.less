@@ -13,11 +13,11 @@
 .site-list__link {
   color: inherit;
 
-  &:hover {
+  &[href]:hover {
     color: rgba(17, 17, 17, 0.6);
   }
 
-  &:active {
+  &[href]:active {
     color: rgba(17, 17, 17, 0.3);
   }
 }
@@ -42,11 +42,6 @@
       }
     }
   }
-
-  .site-list__item--active .site-list__link:hover,
-  .site-list__item--active .site-list__link:active {
-    color: inherit;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -59,11 +54,11 @@
   }
 
   .site-list--home .site-list__link {
-    &:hover {
+    &[href]:hover {
       color: rgba(255, 255, 255, 0.6);
     }
 
-    &:active {
+    &[href]:active {
       color: rgba(255, 255, 255, 0.3);
     }
   }

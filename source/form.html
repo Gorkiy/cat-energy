@@ -36,7 +36,7 @@
         <p class="order__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
           <div class="order-form__profile-wrapper">
-            <fieldset class="order-form__basic">
+            <fieldset class="order-form__group">
               <div class="order-form__text-row">
                 <label class="order-form__label" for="name">Имя:*</label>
                 <input class="order-form__input" type="text" name="name" id="name" value="Барсик" required>
@@ -50,7 +50,7 @@
                 <input class="order-form__input" type="text" name="age" id="age" value="7">
               </div>
             </fieldset>
-            <fieldset class="order-form__kind">
+            <fieldset class="order-form__group order-form__group--kind">
               <div class="order-form__radio-row">
                 <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="weightloss" value="weightloss">
                 <label class="order-form__label" for="weightloss">Похудение</label>
@@ -65,7 +65,7 @@
               </div>
             </fieldset>
           </div>
-          <fieldset class="order-form__owner">
+          <fieldset class="order-form__group">
             <legend class="order-form__header header">Контактные данные (владельца кота)</legend>
             <div class="order-form__owner-wrapper">
               <div class="order-form__text-row">
@@ -78,12 +78,12 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="order-form__comment">
+          <fieldset class="order-form__group">
             <legend class="order-form__header header">Комментарий</legend>
             <textarea class="order-form__comment-field" rows="4" cols="50">Расскажите обо всех повадках кота
             </textarea>
           </fieldset>
-          <fieldset class="order-form__other">
+          <fieldset class="order-form__group">
             <legend class="order-form__header header">Дополнительно</legend>
             <div class="order-form__other-wrapper">
               <div class="order-form__check-row">
