@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  .header(24px);
+  line-height: 1;
+  color: @main-color;
+  background-color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    width: 100vw;
+    height: 3px;
+    background-color: @green-bg;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    font-size: 36px;
+
+    &::before {
+      left: 0;
+      top: 15px;
+      transform: translateX(calc((@tablet-width - 100vw) / 2));
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    &::before {
+      left: 0;
+      top: 17px;
+      transform: translateX(calc((@desktop-width - 100vw) / 2));
+    }
+  }
+}

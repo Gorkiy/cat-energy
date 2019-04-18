@@ -1,22 +1,7 @@
-.addons {
-  position: relative;
-}
-
 .addons__header {
-  padding-left: 20px;
-  .header(24px);
-  line-height: 1;
-  margin-bottom: 30px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: -20px;
-    top: 10px;
-    width: 53px;
-    height: 3px;
-    background-color: @green-bg;
-  }
+  display: inline-block;
+  margin-left: -20px;
+  padding: 0 20px;
 }
 
 .addons__list {
@@ -62,36 +47,20 @@
   font-weight: normal;
   line-height: 1.25;
   color: white;
-  background: url("../img/icon-gift.svg") no-repeat center / 56px 61px,
-    url("../img/gift-photo-mobile@1x.jpg") no-repeat center,
-    @green-bg;
-  background-position: center 20%;
+  background-color: @green-bg;
+  // mask-image: url("../img/icon-gift.svg");
+  // background-color: @green-bg;
+  background-image: url("../img/icon-gift.svg"),
+    url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 65px, center;
+  background-size: 56px 61px, cover;
 }
 
 @media (min-width: @tablet-width) {
   .addons__header {
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: @tablet-width;
-    font-size: 36px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 20px;
-      width: 53px;
-      height: 3px;
-      background-color: @green-bg;
-    }
-
-    &::after {
-      right: 0;
-      top: 20px;
-      width: 45%;
-    }
+    margin-left: -30px;
+    padding: 0 30px;
   }
 
   .addons__list {
@@ -151,13 +120,6 @@
 
   .addons__item {
     width: 895px;
-  }
-
-  .addons__header {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    width: @desktop-width - 220px;
   }
 
   .addons__button {

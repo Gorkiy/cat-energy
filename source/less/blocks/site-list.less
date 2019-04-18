@@ -12,17 +12,54 @@
 
 .site-list__link {
   color: inherit;
+
+  &[href]:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .site-list__item {
     padding: 0;
     margin-left: 30px;
+    border: none;
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background-color: @green-bg;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list--home {
     color: white;
+  }
+
+  .site-list--home .site-list__item--active::after {
+    background-color: white;
+  }
+
+  .site-list--home .site-list__link {
+    &[href]:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &[href]:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }

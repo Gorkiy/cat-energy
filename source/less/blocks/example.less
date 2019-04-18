@@ -31,3 +31,29 @@
 .example__progress {
   margin: 35px auto 25px;
 }
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: white;
+  }
+
+  .example__story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .example__stat-wrapper {
+    width: 40%;
+    justify-content: space-between;
+    margin-right: auto;
+  }
+
+  .example__cost {
+    width: 130px;
+    text-align: right;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+// }

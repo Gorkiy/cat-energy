@@ -58,6 +58,7 @@
   &::before {
     content: "";
     position: absolute;
+    display: block;
     top: 5px;
     right: -26px;
     width: 0;
@@ -76,6 +77,27 @@
     height: 2px;
     background-color: black;
   }
+}
+
+.catalogs__button:hover::before {
+  right: -44px;
+}
+
+.catalogs__button:hover::after {
+  right: -39px;
+  width: 24px;
+}
+
+.catalogs__button:active {
+  color: rgba(17, 17, 17, 0.3);
+}
+
+.catalogs__button:active::before {
+  border-left: 5px solid rgba(17, 17, 17, 0.3);
+}
+
+.catalogs__button:active::after {
+  background-color: rgba(17, 17, 17, 0.3);
 }
 
 @media (min-width: @tablet-width) {
