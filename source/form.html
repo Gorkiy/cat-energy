@@ -52,7 +52,7 @@
             </fieldset>
             <fieldset class="order-form__group order-form__group--kind">
               <div class="order-form__radio-row">
-                <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="weightloss" value="weightloss">
+                <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="weightloss" value="weightloss" checked disabled>
                 <label class="order-form__label" for="weightloss">Похудение</label>
               </div>
               <div class="order-form__radio-row">
@@ -60,7 +60,7 @@
                 <label class="order-form__label" for="gain">Набор массы</label>
               </div>
               <div class="order-form__radio-row">
-                <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="please-advise" value="please-advise" checked>
+                <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="please-advise" value="please-advise">
                 <label class="order-form__label" for="please-advise">Не знаю (Нужен ваш совет)</label>
               </div>
             </fieldset>
@@ -70,11 +70,11 @@
             <div class="order-form__owner-wrapper">
               <div class="order-form__text-row">
                 <label class="order-form__label" for="email">E-mail:*</label>
-                <input class="order-form__input" type="text" name="email" id="email" required>
+                <input class="order-form__input order-form__input--email" type="text" name="email" id="email" required>
               </div>
               <div class="order-form__text-row">
                 <label class="order-form__label" for="phone">Телефон:*</label>
-                <input class="order-form__input" type="text" name="phone" id="phone" required>
+                <input class="order-form__input order-form__input--phone" type="text" name="phone" id="phone" required>
               </div>
             </div>
           </fieldset>
@@ -112,10 +112,12 @@
         </form>
       </section>
     </main>
-    <section class="contacts">
+    <section class="contacts contacts--home">
       <div class="contacts__container container">
-        <p class="contacts__callout">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+        <div class="contacts__address-wrapper">
+          <p class="contacts__callout">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+        </div>
       </div>
       <div class="contacts__map"></div>
     </section>

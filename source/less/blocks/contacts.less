@@ -8,11 +8,16 @@
 
 .contacts__container {
   padding: 30px 20px;
+}
+
+.contacts__address-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .contacts__callout {
+  margin-right: 20px;
   .header--upper(16px);
   line-height: 1.25;
   color: @main-color;
@@ -42,8 +47,30 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .contacts__callout {
+    width: 20%;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .contacts {
+    position: relative;
+  }
+
+  .contacts__container {
+    padding: 0;
+  }
+
+  .contacts__address-wrapper {
+    padding: 60px 75px;
+    position: absolute;
+    top: 100px;
+    z-index: 2;
     background-color: white;
+  }
+
+  .contacts__map::after {
+    left: 70%;
   }
 }
