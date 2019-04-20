@@ -1,9 +1,22 @@
 .main-program {
   padding-top: 30px;
   text-align: center;
+  // background-image: linear-gradient(to bottom, @green-bg 65%, white 35%);
+  // background-image: url("../img/index-background-mobile@1x.jpg");
+  // background-size: 305px 305px, 100% 100%;
+  // background-repeat: no-repeat;
+
+
   background: url("../img/index-background-mobile@1x.jpg") no-repeat center,
     linear-gradient(to bottom, @green-bg 65%, white 35%);
   background-position: center top;
+
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      // background-image: linear-gradient(to bottom, @green-bg 65%, white 35%);
+
+    }
 }
 
 .main-program__header {
