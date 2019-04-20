@@ -1,22 +1,27 @@
 .main-program {
+  position: relative;
   padding-top: 30px;
   text-align: center;
-  // background-image: linear-gradient(to bottom, @green-bg 65%, white 35%);
-  // background-image: url("../img/index-background-mobile@1x.jpg");
-  // background-size: 305px 305px, 100% 100%;
-  // background-repeat: no-repeat;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 175px;
+    z-index: -1;
+    min-height: 305px;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-color: @green-bg;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat center,
-    linear-gradient(to bottom, @green-bg 65%, white 35%);
-  background-position: center top;
-
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-mobile@2x.jpg");
-      // background-image: linear-gradient(to bottom, @green-bg 65%, white 35%);
-
     }
+  }
 }
 
 .main-program__header {
@@ -24,11 +29,6 @@
   text-align: center;
   color: white;
   line-height: 1;
-}
-
-.main-program__image {
-  display: block;
-  margin: auto;
 }
 
 .main-program__slogan {
@@ -40,17 +40,26 @@
   text-align: center;
 }
 
+.main-program__button {
+  width: 100%;
+}
+
 @media (min-width: @tablet-width) {
   .main-program {
     padding-left: 90px;
     padding-right: 90px;
     min-height: 740px;
     text-align: left;
-    background: none,
-      white;
+    margin-bottom: 120px;
+
+    &::after {
+      background: none;
+    }
   }
 
   .main-program__header {
+    position: relative;
+    z-index: 2;
     color: @main-color;
     text-align: left;
     width: 500px;
@@ -64,8 +73,12 @@
   }
 
   .main-program__button {
+    width: auto;
+  }
+
+  .main-program__image {
     position: absolute;
-    top: 300px; /* Временно. ps. И posiiton нет у нужного родителя. */
+    z-index: -1;
   }
 }
 
@@ -73,18 +86,28 @@
   .main-program {
     background: none;
     min-height: 630px;
+    margin-bottom: 0;
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 0;
+      margin-top: -90px;
+      left: auto;
       right: 0;
-      z-index: -1;
       width: 50%;
-      height: 650px;
-      background: url("../img/index-background-desktop@1x.jpg") no-repeat center,
-        @green-bg;
-      background-position: right top;
+      bottom: auto;
+      height: 100%;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: right bottom;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
+
+    .main-program__image {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
     }
   }
 }
