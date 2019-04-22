@@ -15,7 +15,7 @@
   flex-grow: 1;
 }
 
-.catalog__image {
+.catalog__image-box {
   flex-basis: 140px;
 }
 
@@ -37,6 +37,7 @@
 
 @media (min-width: @tablet-width) {
   .catalog__list {
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -63,9 +64,19 @@
     }
   }
 
-  .catalog__image {
+  .catalog__image-box {
+    margin-left: -40px;
+    margin-right: -40px;
+    display: flex;
+    align-items: flex-end;
     flex-basis: auto;
-    margin-top: -90px;
+    min-height: 210px;
+    margin-top: -120px;
+  }
+
+  .catalog__image {
+    display: block;
+    margin-top: auto;
   }
 
   .catalog__name {
