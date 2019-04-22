@@ -47,14 +47,17 @@
   font-weight: normal;
   line-height: 1.25;
   color: white;
-  background-color: @green-bg;
-  // mask-image: url("../img/icon-gift.svg");
-  // background-color: @green-bg;
   background-image: url("../img/icon-gift.svg"),
     url("../img/gift-photo-mobile@1x.jpg");
+  background-color: @green-bg;
   background-repeat: no-repeat;
   background-position: center 65px, center;
   background-size: 56px 61px, cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/icon-gift.svg"),
+      url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -101,15 +104,21 @@
     width: 100%;
     text-align: left;
     color: white;
-    background: url("../img/icon-gift.svg") no-repeat center / 56px 61px,
-      url("../img/gift-photo-tablet@1x.jpg") no-repeat center / cover,
-      @green-bg;
-    background-position: 12% 50%, 50% 80%;
+    background-image: url("../img/icon-gift.svg"),
+      url("../img/gift-photo-tablet@1x.jpg");
+    background-color: @green-bg;
+    background-position: 12% 50%, 50% 65%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/icon-gift.svg"),
+        url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .addons_wrapper {
+    margin: 40px auto 80px;
     display: flex;
     justify-content: space-between;
   }
@@ -133,9 +142,14 @@
     width: 245px;
     height: 100%;
     text-align: center;
-    background: url("../img/icon-gift.svg") no-repeat center / 56px 61px,
-      url("../img/gift-photo-desktop@1x.jpg") no-repeat center / cover,
-      @green-bg;
+    background-image: url("../img/icon-gift.svg"),
+      url("../img/gift-photo-desktop@1x.jpg");
+    background-color: @green-bg;
     background-position: center 20%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/icon-gift.svg"),
+        url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
