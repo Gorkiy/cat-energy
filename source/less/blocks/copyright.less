@@ -5,9 +5,28 @@
 }
 
 .copyright__name {
+  margin-right: 20px;
   font: inherit;
+  color: @paragraph-color;
   font-size: 16px;
   line-height: 1;
+}
+
+.copyright__logo svg {
+  fill: @paragraph-color;
+}
+
+.copyright__logo {
+  display: flex;
+  align-items: center;
+
+  &:hover svg {
+    fill: @green-bg;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
