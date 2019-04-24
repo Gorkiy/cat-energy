@@ -40,6 +40,10 @@
           <h1 class="main-program__header title">Функциональное питание для котов</h1>
           <b class="main-program__slogan">Занялся собой? Займись котом!</b>
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+
             <source media="(min-width: 1280px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="main-program__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="«Кэт энерджи» c курочкой">
@@ -95,11 +99,24 @@
             <b class="example__cost">Затраты на питание: 15 000 руб.</b>
           </div>
           <div class="example__before-after">
-            <picture>
+            <picture class="example__before">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
               <source media="(min-width: 1280px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
               <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Пример похудения на диете «Кэт энерджи»">
           </picture>
+          <picture class="example__after visually-hidden">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1280px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+            <img class="example__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Пример похудения на диете «Кэт энерджи»">
+        </picture>
             <div class="example__progress progress">
               <span class="progress__title">Было</span>
               <span class="progress__bar"></span>
@@ -120,17 +137,34 @@
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+        <a class="page-footer__logo-link" href="#">
+          <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Вконтакте</span></a>
+              <a class="social__link social__link--vkontakte" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg width="30" height="16" aria-hidden="true" role="presentation">
+                  <use xlink:href="img/svg/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a>
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                <svg width="23" height="23" aria-hidden="true" role="presentation">
+                  <use xlink:href="img/svg/sprite.svg#icon-insta"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg width="14" height="28" aria-hidden="true" role="presentation">
+                  <use xlink:href="img/svg/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
