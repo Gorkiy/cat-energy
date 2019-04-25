@@ -1,10 +1,6 @@
-.features {
-  margin-top: 20px;
-}
-
 .features__header {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin-top: -2px;
+  margin-bottom: 17px;
 }
 
 .features__list {
@@ -13,23 +9,22 @@
 
 .features__item {
   position: relative;
-  margin-left: 70px;
-  margin-bottom: 20px;
+  margin-left: 80px;
   display: flex;
   align-items: center;
-  min-height: 50px;
+  min-height: 80px;
 
   &::after {
     content: "";
     position: absolute;
     align-self: start;
     top: 10px;
-    left: -70px;
-    width: 50px;
-    height: 50px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50px auto;
+    background-size: 60px auto;
   }
 
   &--healthy::after {
@@ -71,11 +66,12 @@
 
 @media (min-width: @tablet-width) {
   .features {
+    position: relative;
     margin-top: 50px;
   }
 
   .features__list {
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -84,16 +80,16 @@
 
   .features__item {
     position: relative;
-    padding-top: 100px;
+    padding-top: 110px;
     margin-left: 0;
-    margin-bottom: 50px;
-    flex-basis: 350px;
+    margin-bottom: 105px;
+    flex-basis: 325px;
 
     &::before {
       position: absolute;
-      top: -32px;
-      left: 100px;
-      .header(228px);
+      top: -40px;
+      left: 115px;
+      .header(281px);
       color: @grey-bg;
       line-height: 1;
       z-index: -1;
@@ -124,8 +120,8 @@
   }
 
   .features__description {
-    width: 220px;
-    line-height: 1.5;
+    width: 250px;
+    min-height: 100px;
   }
 }
 

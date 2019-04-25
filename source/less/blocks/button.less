@@ -1,9 +1,13 @@
 .button {
   display: inline-block;
-  padding: 10px 25px 9px;
-  .header--upper(20px);
+  padding: 11px 25px;
+  .header--upper(16px);
   color: white;
   background-color: #68b738;
+
+  &--home {
+    font-size: 14px;
+  }
 
   &:hover {
     background-color: #5eaa2f;
@@ -12,5 +16,12 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5eaa2f;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button--home {
+    font-size: 20px;
+    padding: 14px 27px;
   }
 }
