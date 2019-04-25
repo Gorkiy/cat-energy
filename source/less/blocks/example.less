@@ -1,5 +1,5 @@
 .example {
-  padding-top: 18px;
+  padding-top: 50px;
   padding-bottom: 1px;
   background-color: @grey-bg;
 }
@@ -42,8 +42,15 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    background-color: white;
+    margin-top: -30px;
     padding-bottom: 0;
+    padding-top: 45px;
+    background-color: white;
+    border-top: 1px solid #eaeaea;
+  }
+
+  .example__header {
+    margin-bottom: 47px;
   }
 
   .example__story {
@@ -53,21 +60,23 @@
   }
 
   .example__stat-wrapper {
-    width: 40%;
+    width: 52%;
     justify-content: space-between;
-    margin-right: auto;
+    margin: 38px 0;
   }
 
   .example__cost {
+    margin-top: 45px;
     margin-right: 0;
-    width: 130px;
+    font-size: 20px;
+    width: 190px;
     text-align: right;
   }
 
   .example__before-after {
-    padding: 40px;
-    transform: translateX(calc((708px - 100vw) / 2));
-    width: 100vw;
+    margin-top: -25px;
+    padding: 40px 0 70px;
+    .full-width();
     background-image: linear-gradient(to top, @grey-bg 65%, white 35%);
   }
 }
@@ -113,6 +122,7 @@
   }
 
   .example__before-after {
+    left: 0;
     z-index: 2;
     transform: none;
     flex-grow: 1;

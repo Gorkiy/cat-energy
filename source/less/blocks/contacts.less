@@ -59,11 +59,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__container {
+    padding: 10px 40px 40px;
+  }
+
   .contacts__callout {
     width: 20%;
+    font-size: 20px;
+  }
+
+  .contacts__address {
+    width: 25%;
+    font-size: 16px;
+    text-align: right;
   }
 
   .contacts__map {
+    min-height: 400px;
     background-image: url("../img/bg-map-tablet@1x.png");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {

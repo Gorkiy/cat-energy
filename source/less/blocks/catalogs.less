@@ -104,17 +104,18 @@
 @media (min-width: @tablet-width) {
   .catalogs__item {
     margin-top: 30px;
-    padding: 50px;
+    padding: 40px 52px;
     background-color: @grey-bg;
   }
 
   .catalogs__header {
     margin-left: auto;
+    margin-bottom: 27px;
     font-size: 36px;
     line-height: 1;
 
     &::before {
-      top: -20px;
+      top: 15px;
       left: auto;
       right: 10px;
       width: 200px;
@@ -123,38 +124,39 @@
 
     &--slim::after {
       left: auto;
-      top: -30px;
-      right: 10px;
+      top: 0;
+      right: 12px;
       width: 200px;
       height: 200px;
     }
 
     &--pro::after {
       left: auto;
-      top: 25px;
-      right: -20px;
+      top: 58px;
+      right: -22px;
       width: 268px;
       height: 113px;
     }
   }
 
   .catalogs__description {
-    max-width: 55%;
+    margin-bottom: 27px;
+    max-width: 56%;
     border-bottom: none;
   }
 
   .catalogs__button {
-    margin-top: 5px;
+    margin-bottom: 18px;
     font-size: 20px;
 
     &::before {
       top: 7px;
-      right: -34px;
+      right: -46px;
     }
 
     &::after {
       top: 11px;
-      right: -30px;
+      right: -43px;
     }
   }
 }
