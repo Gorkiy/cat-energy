@@ -82,8 +82,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .example {
+    border: none;
+    padding-top: 40px;
+  }
+
   .example__container {
-    padding-top: 50px;
     position: relative;
     display: flex;
     flex-wrap: nowrap;
@@ -91,11 +95,11 @@
   }
 
   .example__story {
-    padding: 80px 0 100px;
+    padding: 55px 0 60px;
     position: relative;
     z-index: 1;
     flex-direction: column;
-    flex-basis: 400px;
+    flex-basis: 470px;
 
     &::after {
       content: "";
@@ -111,18 +115,21 @@
 
   .example__cost {
     margin-left: 0;
-    margin-top: 40px;
+    margin-top: 20px;
     width: auto;
     text-align: left;
   }
 
   .example__stat-wrapper {
-    margin-right: 42px;
+    margin-top: 55px;
+    margin-right: 103px;
     width: auto;
   }
 
   .example__before-after {
-    left: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    left: 70px;
     z-index: 2;
     transform: none;
     flex-grow: 1;
@@ -131,6 +138,6 @@
   }
 
   .example__image {
-    margin-top: -240px;
+    margin-top: -180px;
   }
 }
