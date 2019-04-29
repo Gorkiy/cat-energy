@@ -1,17 +1,34 @@
+.page-catalog {
+  overflow-x: hidden;
+}
+
 .page-catalog__header {
-  margin: 20px;
+  position: relative;
+  margin: 15px 20px 10px;
+
+  &::after {
+    .full-width();
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    border-bottom: 1px solid #eaeaea;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-catalog__header {
-    padding: 30px 0;
-    margin: 0 auto;
+    margin: 47px auto 85px;
     width: calc(@tablet-width - 60px);
+  }
+
+  &::after {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-catalog__header {
-    width: calc(@desktop-width - 220px);
+    margin: 62px auto 0;
+    width: calc(@desktop-width - 60px);
   }
 }

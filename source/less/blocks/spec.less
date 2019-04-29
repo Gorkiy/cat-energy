@@ -1,6 +1,9 @@
 .spec {
   width: 100%;
   color: @paragraph-color;
+  font-size: 12px;
+  border-collapse: collapse;
+  border: none;
 }
 
 .spec__value {
@@ -9,8 +12,11 @@
 
 @media (min-width: @tablet-width) {
   .spec {
-    border: 1px;
-    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  .spec td {
+    padding: 5px 0;
   }
 
   .spec__single {

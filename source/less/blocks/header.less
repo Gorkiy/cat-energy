@@ -21,11 +21,9 @@
     font-size: 36px;
 
     &::before {
-      left: 0;
-      top: 15px;
+      left: -32px;
+      top: 22px;
       transform: translateX(calc((@tablet-width - 100vw) / 2));
-      .full-width();
-      border: 1px solid red;
     }
   }
 }
@@ -33,8 +31,7 @@
 @media (min-width: @desktop-width) {
   .header {
     &::before {
-      left: 0;
-      top: 17px;
+      left: 5px;
       transform: translateX(calc((@desktop-width - 100vw) / 2));
     }
   }
