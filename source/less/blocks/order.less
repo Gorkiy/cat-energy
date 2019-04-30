@@ -1,16 +1,32 @@
+.order__header {
+  margin: 15px 0 26px;
+}
+
 .order__description {
+  margin-bottom: 8px;
   .header--upper(14px);
   line-height: 1.29;
 }
 
 @media (min-width: @tablet-width) {
+  .order__header {
+    margin-top: 46px;
+    margin-bottom: 57px;
+  }
+
   .order__description {
-    width: 35%;
+    padding: 0 40px 0;
+    width: 420px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .order__header {
+    margin: 65px 0 55px;
+  }
+
   .order__description {
-    width: 20%;
+    padding: 0;
+    width: 350px;
   }
 }

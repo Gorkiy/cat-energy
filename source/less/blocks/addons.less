@@ -1,7 +1,8 @@
 .addons__header {
-  display: inline-block;
+  margin-bottom: 33px;
   margin-left: -20px;
   padding: 0 20px;
+  display: inline-block;
 }
 
 .addons__list {
@@ -11,11 +12,12 @@
 
 .addons__item {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   border-top: 1px solid #eaeaea;
 }
 
 .addons__name {
+  margin-top: 13px;
   margin-bottom: 12px;
   .header--upper(16px);
   line-height: 1;
@@ -28,18 +30,18 @@
 
 .addons__price {
   position: absolute;
-  right: 20px;
+  right: 0;
 }
 
 .addons__button {
-  margin-top: 15px;
+  margin-top: 11px;
   width: 100%;
   text-align: center;
 }
 
 .addons__goodies {
-  margin: 40px auto;
-  padding: 180px 60px 0;
+  margin: 40px auto 33px;
+  padding: 185px 55px 0;
   width: 280px;
   height: 289px;
   text-align: center;
@@ -62,16 +64,17 @@
 
 @media (min-width: @tablet-width) {
   .addons__header {
-    margin-left: -30px;
-    padding: 0 30px;
+    margin-left: 2px;
+    padding: 0 35px;
   }
 
   .addons__list {
+    margin-top: 47px;
     border: none;
   }
 
   .addons__item {
-    padding: 15px 30px 30px;
+    padding: 13px 37px 26px;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -99,7 +102,9 @@
   }
 
   .addons__goodies {
-    padding: 70px 80px 100px 450px;
+    margin-top: 70px;
+    margin-bottom: 76px;
+    padding: 70px 110px 100px 425px;
     height: 200px;
     width: 100%;
     text-align: left;
@@ -107,7 +112,7 @@
     background-image: url("../img/icon-gift.svg"),
       url("../img/gift-photo-tablet@1x.jpg");
     background-color: @green-bg;
-    background-position: 12% 50%, 50% 65%;
+    background-position: 14% 47%, 50% 65%;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/icon-gift.svg"),
@@ -117,35 +122,60 @@
 }
 
 @media (min-width: @desktop-width) {
+  .addons {
+    margin-bottom: 0;
+  }
+
+  .addons__header {
+    margin-left: -35px;
+    margin-bottom: 0;
+    padding: 0 35px;
+  }
+
   .addons_wrapper {
-    margin: 40px auto 80px;
+    margin: 80px auto 88px;
     display: flex;
     justify-content: space-between;
   }
 
   .addons__list {
+    margin: 0;
     width: 100%;
   }
 
   .addons__item {
+    padding: 11px 0 13px;
     width: 895px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .addons__package {
+    width: 185px;
+    text-align: left;
+  }
+
+  .addons__price {
+    position: static;
   }
 
   .addons__button {
-    width: auto;
+    width: 245px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 40px;
   }
 
   .addons__goodies {
     margin: 0 0 0 auto;
-    padding: 180px 60px 0;
+    padding: 185px 40px 0;
     width: 245px;
     height: 100%;
     text-align: center;
     background-image: url("../img/icon-gift.svg"),
       url("../img/gift-photo-desktop@1x.jpg");
     background-color: @green-bg;
-    background-position: center 20%;
+    background-position: center 28%;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/icon-gift.svg"),

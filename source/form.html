@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="css/style.min.css" as="style">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
@@ -38,12 +40,12 @@
       </nav>
     </header>
     <main class="page-order">
-      <section class="order container">
+      <section class="order container container--form">
         <h1 class="order__header title">Подбор программы</h1>
         <p class="order__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
           <div class="order-form__profile-wrapper">
-            <fieldset class="order-form__group">
+            <fieldset class="order-form__group order-form__group--cat">
               <div class="order-form__text-row">
                 <label class="order-form__label" for="name">Имя:*</label>
                 <input class="order-form__input" type="text" name="name" id="name" value="Барсик" required>
@@ -60,19 +62,19 @@
             <fieldset class="order-form__group order-form__group--kind">
               <div class="order-form__radio-row">
                 <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="weightloss" value="weightloss" checked disabled>
-                <label class="order-form__label" for="weightloss">Похудение</label>
+                <label class="order-form__label order-form__label--check" for="weightloss">Похудение</label>
               </div>
               <div class="order-form__radio-row">
                 <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="gain" value="gain">
-                <label class="order-form__label" for="gain">Набор массы</label>
+                <label class="order-form__label order-form__label--check" for="gain">Набор массы</label>
               </div>
               <div class="order-form__radio-row">
                 <input class="order-form__radio visually-hidden" type="radio" name="cat-info" id="please-advise" value="please-advise">
-                <label class="order-form__label" for="please-advise">Не знаю (Нужен ваш совет)</label>
+                <label class="order-form__label order-form__label--check" for="please-advise">Не знаю (Нужен ваш совет)</label>
               </div>
             </fieldset>
           </div>
-          <fieldset class="order-form__group">
+          <fieldset class="order-form__group order-form__group--owner order-form__group--no-border">
             <legend class="order-form__header header">Контактные данные (владельца кота)</legend>
             <div class="order-form__owner-wrapper">
               <div class="order-form__text-row">
@@ -91,34 +93,34 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="order-form__group">
+          <fieldset class="order-form__group order-form__group--no-border">
             <legend class="order-form__header header">Комментарий</legend>
             <textarea class="order-form__comment-field" rows="4" cols="50">Расскажите обо всех повадках кота
             </textarea>
           </fieldset>
-          <fieldset class="order-form__group">
+          <fieldset class="order-form__group order-form__group--no-border">
             <legend class="order-form__header header">Дополнительно</legend>
             <div class="order-form__other-wrapper">
               <div class="order-form__check-row">
                 <input class="order-form__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked>
-                <label class="order-form__label" for="sweetener">Сахарозаменитель</label>
+                <label class="order-form__label order-form__label--check" for="sweetener">Сахарозаменитель</label>
               </div>
               <div class="order-form__check-row">
                 <input class="order-form__checkbox visually-hidden" type="checkbox" name="water" id="water" value="water">
-                <label class="order-form__label" for="water">Питьевая вода</label>
+                <label class="order-form__label order-form__label--check" for="water">Питьевая вода</label>
               </div>
               <div class="order-form__check-row">
                 <input class="order-form__checkbox visually-hidden" type="checkbox" name="milk" id="milk" value="milk">
-                <label class="order-form__label" for="milk">Молоко</label>
+                <label class="order-form__label order-form__label--check" for="milk">Молоко</label>
               </div>
               <div class="order-form__check-row">
                 <input class="order-form__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins" value="vitamins">
-                <label class="order-form__label" for="vitamins">Витамины</label>
+                <label class="order-form__label order-form__label--check" for="vitamins">Витамины</label>
               </div>
             </div>
           </fieldset>
           <div class="order-form__button-wrapper">
-            <button class="order-form__button button" type="submit">Отправить заявку
+            <button class="order-form__button button button--order" type="submit">Отправить заявку
             </button>
             <span class="order-form__note">* — Обязательные поля</span>
           </div>
@@ -135,7 +137,7 @@
       <div class="contacts__map"></div>
     </section>
     <footer class="page-footer">
-      <div class="page-footer__wrapper container">
+      <div class="page-footer__wrapper">
         <a class="page-footer__logo-link" href="#">
           <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
         </a>
@@ -170,28 +172,13 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
             <b class="copyright__name">HTML Academy</b>
-            <svg aria-label="HTML Academy" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="34px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <svg class="copyright__logo-image" aria-label="HTML Academy" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="34px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
             </svg>
           </a>
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

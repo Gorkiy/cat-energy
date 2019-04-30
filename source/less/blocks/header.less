@@ -9,7 +9,7 @@
     content: "";
     position: absolute;
     top: 12px;
-    width: 100vw;
+    width: 110vw;
     height: 3px;
     background-color: @green-bg;
     z-index: -1;
@@ -21,11 +21,9 @@
     font-size: 36px;
 
     &::before {
-      left: 0;
-      top: 15px;
-      transform: translateX(calc((@tablet-width - 100vw) / 2));
-      .full-width();
-      border: 1px solid red;
+      left: -32px;
+      top: 22px;
+      transform: translateX(calc((@tablet-width - 110vw) / 2));
     }
   }
 }
@@ -33,9 +31,8 @@
 @media (min-width: @desktop-width) {
   .header {
     &::before {
-      left: 0;
-      top: 17px;
-      transform: translateX(calc((@desktop-width - 100vw) / 2));
+      left: 5px;
+      transform: translateX(calc((@desktop-width - 110vw) / 2));
     }
   }
 }
