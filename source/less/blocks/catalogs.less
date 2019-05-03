@@ -78,15 +78,15 @@
     height: 2px;
     background-color: black;
   }
-}
 
-.catalogs__button:hover::before {
-  right: -44px;
-}
+  &:hover::before {
+    right: -44px;
+  }
 
-.catalogs__button:hover::after {
-  right: -39px;
-  width: 24px;
+  &:hover::after {
+    right: -40px;
+    width: 28px;
+  }
 }
 
 .catalogs__button:active {
@@ -157,6 +157,14 @@
     &::after {
       top: 11px;
       right: -43px;
+    }
+
+    &:hover::before {
+      right: -55px;
+    }
+
+    &:hover::after {
+      right: -51px;
     }
   }
 }
