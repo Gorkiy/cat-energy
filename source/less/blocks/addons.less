@@ -13,6 +13,8 @@
 .addons__item {
   position: relative;
   padding-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
   border-top: 1px solid #eaeaea;
 }
 
@@ -21,6 +23,7 @@
   margin-bottom: 12px;
   .header--upper(16px);
   line-height: 1;
+  width: 100%;
 }
 
 .addons__package,
@@ -29,8 +32,7 @@
 }
 
 .addons__price {
-  position: absolute;
-  right: 0;
+  margin-left: auto;
 }
 
 .addons__button {
@@ -78,8 +80,6 @@
 
   .addons__item {
     padding: 12px 37px 26px;
-    display: flex;
-    flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
     border: 1px solid #eaeaea;
@@ -91,6 +91,7 @@
 
   .addons__name {
     font-size: 20px;
+    width: auto;
   }
 
   .addons__package,
@@ -165,6 +166,7 @@
   .addons__price {
     position: static;
     width: 100px;
+    margin: 0;
   }
 
   .addons__button {

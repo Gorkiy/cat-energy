@@ -72,7 +72,7 @@
 .order-form__input {
   position: relative;
   flex-grow: 1;
-  max-height: 45px;
+  height: 45px;
 
   &--icon {
     padding-right: 50px;
@@ -202,10 +202,15 @@
   color: @paragraph-color;
 }
 
-.order-form__icon--phone {
+.order-form__icon {
   position: absolute;
-  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1;
+}
+
+.order-form__icon--phone {
+  right: 13px;
   width: 21px;
   height: 21px;
 }
@@ -239,7 +244,10 @@
   }
 
   .order-form__input {
-    padding: 25px 20px;
+    height: 52px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
   }
 
   .order-form__comment-field {

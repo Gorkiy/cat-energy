@@ -172,12 +172,16 @@
 @media (min-width: @desktop-width) {
   .catalogs {
     display: flex;
-    justify-content: space-between;
   }
 
   .catalogs__item {
-    flex-basis: 570px;
-    margin-top: 0;
+    width: 570px;
+    margin-top: 0;;
+    margin-right: 80px;
+  }
+
+  .catalogs__item:last-child {
+    margin-right: 0;
   }
 
   .catalogs__header {
