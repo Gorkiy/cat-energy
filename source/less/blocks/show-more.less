@@ -1,7 +1,6 @@
 .show-more {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   text-align: center;
 }
 
@@ -47,7 +46,8 @@
 
 @media (min-width: @tablet-width) {
   .show-more__callout {
-    margin-top: 120px;
+    margin: 123px auto 25px;
+    // width: 160px;
     font-size: 20px;
     line-height: 1;
 
@@ -59,11 +59,26 @@
   }
 
   .show-more__text {
-    margin-top: 5px;
+    margin: 0 auto;
+    // width: 165px;
+    // padding: 0 150px;
     font-size: 16px;
+    padding: 0;
   }
 
   .show-more__button {
     margin-top: auto;
+    margin-left: -38px;
+    margin-right: -40px;
+    width: 250px;
   }
+}
+
+@media (min-width: @desktop-width) {
+    .show-more__button {
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+    }
+
 }

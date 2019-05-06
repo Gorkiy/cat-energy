@@ -28,7 +28,7 @@
 }
 
 .example__cost {
-  margin: 28px auto 15px;
+  margin: 28px 0 15px;
   display: block;
   .header--upper(14px);
   line-height: 1.43;
@@ -62,30 +62,41 @@
   .example__stat-wrapper {
     width: 52%;
     justify-content: space-between;
-    margin: 38px 0;
+    margin: 37px 0;
   }
 
   .example__cost {
-    margin-top: 45px;
-    margin-right: 0;
+    margin-top: 43px;
     font-size: 20px;
     width: 190px;
     text-align: right;
   }
 
+  .example__price {
+    margin-left: 60px;
+  }
+
   .example__before-after {
     margin-bottom: 0;
-    margin-top: -25px;
-    padding: 40px 0 70px;
+    padding: 20px;
     .full-width();
-    background-image: linear-gradient(to top, @grey-bg 65%, white 35%);
+    padding: 16px 35px 43px;
+    background-image: linear-gradient(to top, @grey-bg 71%, white 29%);
+  }
+
+  .example__image {
+    transform: translateX(8px);
+  }
+
+  .example__progress {
+    margin-top: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
     border: none;
-    padding-top: 40px;
+    padding-top: 35px;
   }
 
   .example__container {
@@ -95,9 +106,13 @@
     align-items: flex-start;
   }
 
+  .example__header {
+    margin-bottom: 52px;
+  }
+
   .example__story {
     margin-right: 30px;
-    padding: 55px 0 60px;
+    padding: 55px 0;
     position: relative;
     z-index: 1;
     flex-direction: column;
@@ -117,13 +132,13 @@
 
   .example__cost {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 24px;
     width: auto;
     text-align: left;
   }
 
   .example__stat-wrapper {
-    margin-top: 55px;
+    margin-top: 53px;
     margin-right: 0;
     width: auto;
     justify-content: flex-start;
@@ -134,8 +149,8 @@
   }
 
   .example__before-after {
-    margin: 0;
-    padding-bottom: 0;
+    margin: -195px 0;
+    padding: 30px 0;
     left: 70px;
     z-index: 2;
     transform: none;
@@ -145,6 +160,11 @@
   }
 
   .example__image {
-    margin-top: -200px;
+    transform: translateX(0px);
+  }
+
+  .example__progress {
+    margin-left: 40px;
+    margin-top: 38px;
   }
 }
