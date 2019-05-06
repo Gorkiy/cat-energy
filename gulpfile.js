@@ -27,6 +27,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -79,11 +80,13 @@ gulp.task("images", function () {
   ]))
   .pipe(gulp.dest("source/img"));
 });
+
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("source/img"));
 });
+
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon-*.svg")
   .pipe(svgstore({
@@ -103,6 +106,7 @@ gulp.task("copy", function () {
   })
   .pipe(gulp.dest("build"));
 });
+
 gulp.task("clean", function () {
   return del("build");
 });
