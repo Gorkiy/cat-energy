@@ -78,7 +78,6 @@
 
   .example__before-after {
     margin-bottom: 0;
-    padding: 20px;
     .full-width();
     padding: 16px 35px 43px;
     background-image: linear-gradient(to top, @grey-bg 71%, white 29%);
@@ -95,9 +94,21 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    // position: relative;
+    position: relative;
     border: none;
     padding-top: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 170px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-color: @grey-bg;
+    }
   }
 
   .example__container {
@@ -118,22 +129,6 @@
     z-index: 1;
     flex-direction: column;
     width: 470px;
-    // border: 1px solid red;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      // left: -50vw;
-      // right: -150vw;
-      transform: translateX(calc((1220px - 100vw) / 2));
-      -ms-transform: translateX(-10vw);
-      height: 100%;
-      width: 110vw;
-      background-color: @grey-bg;
-      z-index: -1;
-      // border: 1px solid red;
-    }
   }
 
   .example__cost {
@@ -166,7 +161,7 @@
   }
 
   .example__image {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 
   .example__progress {

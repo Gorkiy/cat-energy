@@ -3,17 +3,23 @@
   .header(24px);
   line-height: 1;
   color: @main-color;
-  background-color: white;
 
   &::before {
     content: "";
     position: absolute;
+    display: block;
     top: 12px;
-    width: 110vw;
+    width: 100vw;
     height: 3px;
     background-color: @green-bg;
     z-index: -1;
   }
+}
+
+.header__inner {
+  margin-left: -20px;
+  padding: 0 20px;
+  background: white;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,20 +27,29 @@
     font-size: 36px;
 
     &::before {
-      left: -32px;
-      top: 22px;
-      transform: translateX(calc((@tablet-width - 110vw) / 2));
-        -ms-transform: translateX(-20vw);
+      margin-left: -50vw;
+      left: 50%;
+      top: 23px;
     }
+  }
+
+  .header__inner {
+    margin-left: -42px;
+    padding: 0 40px;
+  }
+
+  .header__inner--addon {
+    margin-left: -2px;
+    padding: 0 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header {
-    &::before {
-      left: 5px;
-      transform: translateX(calc((@desktop-width - 110vw) / 2));
-        -ms-transform: translateX(-10vw);
-    }
+  .header__inner {
+    margin-left: -42px;
   }
+
+  // .header__inner--addon {
+  //   margin-left: -42px;
+  // }
 }

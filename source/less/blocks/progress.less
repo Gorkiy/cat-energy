@@ -76,7 +76,6 @@
       bottom: -7px;
       left: 0;
       height: 1px;
-      // z-index: 2;
       background-color: @main-color;
       opacity: 0.23;
     }
@@ -92,7 +91,7 @@
 
   .progress__toggle {
     position: absolute;
-    top: -5px;;
+    top: -5px;
     left: 50%;
     transform: translateX(-50%);
     width: 34px;
@@ -100,7 +99,7 @@
     background-color: white;
     border: solid 1px #cdcdcd;
     border-radius: 50%;
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
 
     &::after {
       content: "";
@@ -115,11 +114,11 @@
     }
 
     &:hover {
-      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
     &:active {
-      box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       border: solid 2px @green-bg;
     }
   }
