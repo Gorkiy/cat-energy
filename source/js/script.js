@@ -10,28 +10,8 @@ navToggle.addEventListener('click', function() {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   }
+
 });
-
-// Переключение фотографий до-после
-var catBefore = document.querySelector('.example__before');
-var catAfter = document.querySelector('.example__after');
-var toggleBefore = document.querySelector('.progress__button--before');
-var toggleAfter = document.querySelector('.progress__button--after');
-
-toggleBefore.addEventListener('click', function() {
-  if (catBefore.classList.contains('visually-hidden')) {
-    catBefore.classList.remove('visually-hidden');
-    catAfter.classList.add('visually-hidden');
-  }
-});
-
-toggleAfter.addEventListener('click', function() {
-  if (catAfter.classList.contains('visually-hidden')) {
-    catAfter.classList.remove('visually-hidden');
-    catBefore.classList.add('visually-hidden');
-  }
-});
-
 /*! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
  * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
@@ -1577,3 +1557,23 @@ toggleAfter.addEventListener('click', function() {
   }
 
 } )( window, document );
+
+// Переключение фотографий до-после
+var catBefore = document.querySelector('.example__before');
+var catAfter = document.querySelector('.example__after');
+var toggleBefore = document.querySelector('.progress__button--before');
+var toggleAfter = document.querySelector('.progress__button--after');
+
+toggleBefore.addEventListener('click', function() {
+  if (catBefore.classList.contains('visually-hidden')) {
+    catBefore.classList.remove('visually-hidden');
+    catAfter.classList.add('visually-hidden');
+  }
+});
+
+toggleAfter.addEventListener('click', function() {
+  if (catAfter.classList.contains('visually-hidden')) {
+    catAfter.classList.remove('visually-hidden');
+    catBefore.classList.add('visually-hidden');
+  }
+});
