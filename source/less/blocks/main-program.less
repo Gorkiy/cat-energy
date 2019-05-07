@@ -1,6 +1,6 @@
 .main-program {
-  margin-bottom: 22px;
   position: relative;
+  margin-bottom: 22px;
   padding-top: 26px;
   text-align: center;
 
@@ -27,9 +27,9 @@
 
 .main-program__header {
   margin: 0;
+  line-height: 1;
   text-align: center;
   color: white;
-  line-height: 1;
 }
 
 .main-program__slogan {
@@ -37,8 +37,8 @@
   display: block;
   .header--upper(14px);
   line-height: 1;
-  color: white;
   text-align: center;
+  color: white;
 }
 
 .main-program__button {
@@ -48,10 +48,10 @@
 
 @media (min-width: @tablet-width) {
   .main-program {
+    margin-bottom: 117px;
     padding-top: 45px;
     min-height: 740px;
     text-align: left;
-    margin-bottom: 117px;
 
     &::after {
       background: none;
@@ -59,12 +59,12 @@
   }
 
   .main-program__header {
-    margin-bottom: 41px;
     position: relative;
     z-index: 2;
-    color: @main-color;
-    text-align: left;
+    margin-bottom: 41px;
     width: 500px;
+    text-align: left;
+    color: @main-color;
   }
 
   .main-program__slogan {
@@ -83,23 +83,23 @@
     position: absolute;
     left: 50%;
     bottom: -115px;
-    transform: translateX(-50%);
     z-index: -1;
+    transform: translateX(-50%);
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-program {
-    background: none;
-    min-height: 700px;
     margin-bottom: -51px;
+    min-height: 700px;
+    background: none;
 
     &::after {
-      margin-top: -130px;
       left: auto;
       right: 0;
-      width: 50%;
       bottom: 0;
+      margin-top: -130px;
+      width: 50%;
       height: 100%;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-color: @green-bg;
@@ -118,9 +118,9 @@
     }
 
     .main-program__image {
-      transform: translateX(-160px);
       top: 16px;
       z-index: 1;
+      transform: translateX(-160px);
     }
 
     .main-program__slogan {
