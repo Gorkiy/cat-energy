@@ -9,20 +9,28 @@
 }
 
 @media (min-width: @tablet-width) {
+  .order {
+    transform: translateX(2px);
+  }
+
   .order__header {
     margin-top: 46px;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
+    margin-left: -40px;
   }
 
   .order__description {
-    padding: 0 40px 0;
-    width: 420px;
+    width: 350px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .order {
+    transform: translateX(0);
+  }
+
   .order__header {
-    margin: 65px 0 55px;
+    margin: 62px 0 55px;
   }
 
   .order__description {

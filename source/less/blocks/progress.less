@@ -5,8 +5,8 @@
 }
 
 .progress__bar {
-  margin: 0 15px 0 20px;
   position: relative;
+  left: 4px;
 
   &::before {
     content: "";
@@ -22,7 +22,7 @@
     content: "";
     position: absolute;
     top: 4px;
-    left: 4px;
+    left: 6px;
     width: 35px;
     height: 6px;
     background-color: @green-bg;
@@ -30,11 +30,96 @@
   }
 }
 
-.progress__title {
+.progress__button {
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 17px;
   font-family: @font;
-  font-size: 16px;
   font-weight: normal;
+  font-size: 16px;
   line-height: 1.25;
   color: @main-color;
   text-transform: uppercase;
+  background: none;
+  border: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .progress__bar {
+    left: 2px;
+    top: -5px;
+
+    &::before {
+      width: 430px;
+      height: 6px;
+      background-color: #dbdbdb;
+      border-radius: 6px;
+      border: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .progress__button {
+    position: relative;
+    overflow: visible;
+    margin: 0 21px;
+    font-size: 20px;
+    line-height: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+      height: 1px;
+      background-color: @main-color;
+      opacity: 0.23;
+    }
+
+    &:hover::after {
+      opacity: 0.4;
+    }
+
+    &:active::after {
+      display: none;
+    }
+  }
+
+  .progress__toggle {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border: solid 1px #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: @green-bg;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px @green-bg;
+    }
+  }
 }

@@ -3,9 +3,9 @@
 }
 
 .page-header__logo {
+  padding: 12px 0;
   display: block;
   min-height: 65px;
-  padding: 12px 0;
 
   &:hover {
     opacity: 0.8;
@@ -22,7 +22,7 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    padding-top: 10px;
+    padding-top: 12px;
     padding-left: 0;
     display: flex;
     align-items: center;
@@ -30,6 +30,7 @@
 
   .page-header__nav {
     margin-left: auto;
+    width: 442px;
   }
 
   .page-header__logo-image {
@@ -40,7 +41,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    padding-top: 40px;
+    padding-top: 43px;
+  }
+
+  .page-header__nav {
+    width: 482px;
   }
 
   .page-header__logo-image {

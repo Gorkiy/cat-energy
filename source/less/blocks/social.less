@@ -1,15 +1,15 @@
 .social__list {
+  padding: 23px 0 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   .list-reset();
-  padding: 23px 0 18px;
   border-bottom: 1px solid #dedede;
   border-top: 1px solid #dedede;
 }
 
 .social__item {
-  width: 50px;
+  width: 55px;
   text-align: center;
 }
 
@@ -50,6 +50,10 @@
     border: none;
   }
 
+  .social__item {
+    width: 50px;
+  }
+
   .social__link {
     width: auto;
     height: 100%;
@@ -68,5 +72,11 @@
       width: 14px;
       height: 28px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__item {
+    width: 50px;
   }
 }

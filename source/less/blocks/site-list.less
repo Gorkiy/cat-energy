@@ -23,9 +23,16 @@
 }
 
 @media (min-width: @tablet-width) {
+  .site-list {
+    margin-left: -35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   .site-list__item {
     padding: 0;
-    margin-right: 35px;
+    margin-left: 35px;
     border: none;
 
     &:last-child {
@@ -39,7 +46,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: -15px;
+        bottom: -12px;
         left: 0;
         height: 2px;
         background-color: @green-bg;

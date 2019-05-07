@@ -1,14 +1,13 @@
 .show-more {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   text-align: center;
 }
 
 .show-more__button {
   width: 100%;
-  background-color: @grey-bg;
   color: @paragraph-color;
+  background-color: @grey-bg;
 
   &:hover {
     background-color: #ebebeb;
@@ -47,7 +46,7 @@
 
 @media (min-width: @tablet-width) {
   .show-more__callout {
-    margin-top: 120px;
+    margin: 123px auto 25px;
     font-size: 20px;
     line-height: 1;
 
@@ -59,11 +58,23 @@
   }
 
   .show-more__text {
-    margin-top: 5px;
+    margin: 0 auto;
+    padding: 0;
     font-size: 16px;
   }
 
   .show-more__button {
     margin-top: auto;
+    margin-left: -38px;
+    margin-right: -40px;
+    width: 250px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .show-more__button {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
   }
 }

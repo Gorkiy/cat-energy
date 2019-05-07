@@ -5,9 +5,9 @@
 }
 
 .catalogs__header {
+  position: relative;
   margin-bottom: 30px;
   margin-left: 70px;
-  position: relative;
   .header--upper(24px);
   line-height: 1.54;
   color: @main-color;
@@ -26,8 +26,8 @@
   &--slim::after {
     content: "";
     position: absolute;
-    top: -4px;
-    left: -70px;
+    top: -8px;
+    left: -67px;
     width: 50px;
     height: 50px;
     background: url("../img/icon-cat-slim.svg") no-repeat center;
@@ -37,7 +37,7 @@
     content: "";
     position: absolute;
     top: -4px;
-    left: -80px;
+    left: -77px;
     width: 67px;
     height: 50px;
     background: url("../img/icon-cat-pro.svg") no-repeat center;
@@ -50,8 +50,8 @@
 }
 
 .catalogs__button {
-  margin-top: 5px;
   position: relative;
+  margin-top: 5px;
   display: inline-block;
   .header--upper(16px);
   color: @main-color;
@@ -59,9 +59,9 @@
   &::before {
     content: "";
     position: absolute;
-    display: block;
     top: 5px;
     right: -35px;
+    display: block;
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
@@ -78,15 +78,15 @@
     height: 2px;
     background-color: black;
   }
-}
 
-.catalogs__button:hover::before {
-  right: -44px;
-}
+  &:hover::before {
+    right: -44px;
+  }
 
-.catalogs__button:hover::after {
-  right: -39px;
-  width: 24px;
+  &:hover::after {
+    right: -40px;
+    width: 28px;
+  }
 }
 
 .catalogs__button:active {
@@ -110,7 +110,7 @@
 
   .catalogs__header {
     margin-left: auto;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     font-size: 36px;
     line-height: 1;
 
@@ -125,7 +125,7 @@
     &--slim::after {
       left: auto;
       top: 0;
-      right: 12px;
+      right: 10px;
       width: 200px;
       height: 200px;
     }
@@ -158,18 +158,30 @@
       top: 11px;
       right: -43px;
     }
+
+    &:hover::before {
+      right: -55px;
+    }
+
+    &:hover::after {
+      right: -51px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalogs {
     display: flex;
-    justify-content: space-between;
   }
 
   .catalogs__item {
-    flex-basis: 570px;
+    width: 570px;
     margin-top: 0;
+    margin-right: 80px;
+  }
+
+  .catalogs__item:last-child {
+    margin-right: 0;
   }
 
   .catalogs__header {

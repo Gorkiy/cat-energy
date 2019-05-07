@@ -28,12 +28,12 @@
 }
 
 .example__cost {
-  margin: 28px auto 15px;
+  margin: 28px 0 15px;
   display: block;
   .header--upper(14px);
   line-height: 1.43;
-  color: @main-color;
   text-align: center;
+  color: @main-color;
 }
 
 .example__progress {
@@ -60,32 +60,55 @@
   }
 
   .example__stat-wrapper {
+    margin: 37px 0;
     width: 52%;
     justify-content: space-between;
-    margin: 38px 0;
   }
 
   .example__cost {
-    margin-top: 45px;
-    margin-right: 0;
-    font-size: 20px;
+    margin-top: 43px;
     width: 190px;
+    font-size: 20px;
     text-align: right;
+  }
+
+  .example__price {
+    margin-left: 60px;
   }
 
   .example__before-after {
     margin-bottom: 0;
-    margin-top: -25px;
-    padding: 40px 0 70px;
     .full-width();
-    background-image: linear-gradient(to top, @grey-bg 65%, white 35%);
+    padding: 16px 35px 43px;
+    background-image: linear-gradient(to top, @grey-bg 71%, white 29%);
+  }
+
+  .example__image {
+    transform: translateX(8px);
+  }
+
+  .example__progress {
+    margin-top: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
+    position: relative;
     border: none;
-    padding-top: 40px;
+    padding-top: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 170px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-color: @grey-bg;
+    }
   }
 
   .example__container {
@@ -95,35 +118,28 @@
     align-items: flex-start;
   }
 
+  .example__header {
+    margin-bottom: 52px;
+  }
+
   .example__story {
-    margin-right: 30px;
-    padding: 55px 0 60px;
     position: relative;
     z-index: 1;
+    margin-right: 30px;
+    padding: 55px 0;
     flex-direction: column;
-    flex-basis: 470px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      transform: translateX(calc((1220px - 100vw) / 2));
-      width: 100vw;
-      height: 100%;
-      background-color: @grey-bg;
-      z-index: -1;
-    }
+    width: 470px;
   }
 
   .example__cost {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 24px;
     width: auto;
     text-align: left;
   }
 
   .example__stat-wrapper {
-    margin-top: 55px;
+    margin-top: 53px;
     margin-right: 0;
     width: auto;
     justify-content: flex-start;
@@ -134,17 +150,22 @@
   }
 
   .example__before-after {
-    margin: 0;
-    padding-bottom: 0;
     left: 70px;
     z-index: 2;
     transform: none;
+    margin: -195px 0;
+    padding: 30px 0;
     flex-grow: 1;
     width: 100%;
     background: none;
   }
 
   .example__image {
-    margin-top: -200px;
+    transform: translateX(0);
+  }
+
+  .example__progress {
+    margin-left: 40px;
+    margin-top: 38px;
   }
 }

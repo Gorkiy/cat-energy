@@ -17,11 +17,11 @@
   &::after {
     content: "";
     position: absolute;
-    align-self: start;
     top: 10px;
     left: -80px;
     width: 60px;
     height: 60px;
+    align-self: start;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60px auto;
@@ -80,7 +80,7 @@
 
   .features__item {
     position: relative;
-    padding-top: 110px;
+    padding-top: 112px;
     margin-left: 0;
     margin-bottom: 105px;
     flex-basis: 325px;
@@ -89,10 +89,10 @@
       position: absolute;
       top: -40px;
       left: 115px;
-      .header(281px);
-      color: @grey-bg;
-      line-height: 1;
       z-index: -1;
+      .header(281px);
+      line-height: 1;
+      color: @grey-bg;
     }
 
     &::after {
@@ -100,6 +100,7 @@
       left: 0;
       width: 80px;
       height: 80px;
+      background-size: 50px auto;
     }
 
     &--healthy::before {

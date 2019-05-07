@@ -14,10 +14,10 @@
 
   &::after {
     .full-width();
-    z-index: 1;
-    content: "";
     position: absolute;
+    content: "";
     bottom: -20px;
+    z-index: 1;
     border-bottom: 1px solid #eaeaea;
   }
 
@@ -35,24 +35,29 @@
 }
 
 .catalog__name {
+  display: block;
   margin-top: 20px;
   margin-bottom: 12px;
+  max-width: 100px;
   .header--upper(16px);
   line-height: 1.25;
-  display: block;
-  max-width: 100px;
 }
 
 .catalog__button {
+  z-index: 1;
   margin-top: -6px;
   width: 100%;
   text-align: center;
 }
 
 @media (min-width: @tablet-width) {
+  .catalog {
+    margin-bottom: 32px;
+  }
+
   .catalog__list {
     margin-top: 165px;
-    margin-bottom: -135px;
+    margin-bottom: -134px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -62,12 +67,15 @@
   .catalog__item {
     padding: 40px;
     margin-bottom: 140px;
-    flex-basis: 324px;
+    width: 324px;
     flex-direction: column;
     border: none;
     background: @grey-bg;
 
     &--show-more {
+      padding-left: 75px;
+      padding-right: 75px;
+      min-height: 430px;
       background-color: transparent;
       border: 1px solid @grey-bg;
     }
@@ -80,25 +88,27 @@
   .catalog__image-box {
     margin-left: -40px;
     margin-right: -40px;
-    align-self: center;
     margin-top: -125px;
+    min-height: 210px;
     display: flex;
     align-items: flex-end;
+    align-self: center;
     flex-basis: auto;
-    min-height: 210px;
   }
 
   .catalog__image {
-    display: block;
     margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
   .catalog__name {
     margin: 38px auto 20px;
     max-width: 130px;
-    text-align: center;
     font-size: 20px;
     line-height: 1;
+    text-align: center;
   }
 
   .catalog__info {
@@ -106,7 +116,7 @@
   }
 
   .catalog__button {
-    margin-top: 34px;
+    margin-top: 35px;
   }
 }
 
@@ -116,14 +126,20 @@
   }
 
   .catalog__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: -80px;
+    margin-top: 163px;
+    justify-content: flex-start;
     border: none;
   }
 
   .catalog__item {
     margin-top: 2px;
-    flex-basis: 245px;
+    margin-left: 80px;
+    width: 245px;
+  }
+
+  .catalog__item--show-more {
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }
