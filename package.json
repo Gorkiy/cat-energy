@@ -2,11 +2,12 @@
   "name": "cat-energy-16",
   "version": "16.0.0",
   "private": true,
+  "homepage": "https://gorkiy.github.io/cat-energy",
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
+    "browser-sync": "^2.26.7",
     "del": "^4.1.0",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
@@ -29,6 +30,8 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "gulp start"
   },
   "browserslist": [
@@ -48,6 +51,7 @@
     "node": "8.15"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "gulp-htmlmin": "^5.0.1"
   }
 }
