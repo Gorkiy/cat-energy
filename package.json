@@ -54,6 +54,6 @@
     "deep-extend": "^0.6.0",
     "gh-pages": "^2.1.1",
     "gulp-htmlmin": "^5.0.1",
-    "merge": "^1.2.1"
+    "merge": "^2.1.1"
   }
 }
